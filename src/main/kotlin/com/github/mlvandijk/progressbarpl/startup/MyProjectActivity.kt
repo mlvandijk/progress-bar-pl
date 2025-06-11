@@ -1,12 +1,16 @@
 package com.github.mlvandijk.progressbarpl.startup
 
-import com.intellij.openapi.diagnostic.thisLogger
+import com.github.mlvandijk.progressbarpl.progressbar.PolishFlagProgressIndicatorProvider
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 
+/**
+ * Project activity that ensures the Polish Flag progress bar is initialized.
+ */
 class MyProjectActivity : ProjectActivity {
 
     override suspend fun execute(project: Project) {
-        thisLogger().warn("Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.")
+        // Initialize the progress bar provider
+        PolishFlagProgressIndicatorProvider.getInstance()
     }
 }
