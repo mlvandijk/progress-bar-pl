@@ -221,7 +221,9 @@ class PolishFlagProgressBar : BasicProgressBarUI() {
 
             // Draw the smile emoji at the end of the progress
             val icon = PolishFlagIconProvider.SMILE_EMOJI
-            icon.paintIcon(progressBar, g2, amountFull - JBUIScale.scale(10), -JBUIScale.scale(6))
+            val emojiSize = icon.iconHeight
+            val emojiY = (h - emojiSize) / 2
+            icon.paintIcon(progressBar, g2, amountFull - JBUIScale.scale(10), emojiY)
         }
 
         g2.translate(0, -(c.height - h) / 2)
