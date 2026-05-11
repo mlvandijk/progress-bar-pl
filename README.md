@@ -1,3 +1,5 @@
+🚨This project is abandoned. Use [Polish Progress Bar](https://github.com/mlvandijk/polishprogressbar) instead. 🚨
+
 # progress-bar-pl
 
 ![Build](https://github.com/mlvandijk/progress-bar-pl/workflows/Build/badge.svg)
